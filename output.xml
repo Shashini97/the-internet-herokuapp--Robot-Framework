@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-19T13:08:56.917592" rpa="false" schemaversion="5">
+<suite id="s1" name="AddRemoveElements" source="D:\IT Self Study\Robot Framework\the internet.herokuapp-Robot Framework\AddRemoveElements.robot">
+<test id="s1-t1" name="Navigate to the page" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:08:57.122663" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-19T13:08:57.122663" elapsed="3.329900"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-19T13:09:00.452563" elapsed="0.043053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-19T13:09:01.497191" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-19T13:09:00.496624" elapsed="1.000567"/>
+</kw>
+<kw name="verifyThePage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:01.535999" level="INFO">Current page contains element 'xpath://h3[contains(text(),'Add/Remove Elements')]'.</msg>
+<arg>xpath://h3[contains(text(),'Add/Remove Elements')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-19T13:09:01.500380" elapsed="0.035619"/>
+</kw>
+<status status="PASS" start="2024-07-19T13:09:01.500380" elapsed="0.035619"/>
+</kw>
+<kw name="addElement">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:01.538298" level="INFO">Clicking element 'xpath://button[contains(text(),'Add Element')]'.</msg>
+<arg>${add_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T13:09:01.537499" elapsed="0.056878"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:01.596482" level="INFO">Clicking element 'xpath://button[contains(text(),'Add Element')]'.</msg>
+<arg>${add_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T13:09:01.594377" elapsed="0.046190"/>
+</kw>
+<status status="PASS" start="2024-07-19T13:09:01.535999" elapsed="0.104568"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-19T13:09:02.656324" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-19T13:09:01.641897" elapsed="1.014850"/>
+</kw>
+<kw name="verifyElements">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:02.681231" level="INFO">Current page contains element 'xpath://button[contains(text(),'Delete')]'.</msg>
+<arg>${delete_element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-19T13:09:02.658485" elapsed="0.022746"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:02.695549" level="INFO">Current page contains element 'xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]'.</msg>
+<arg>xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-19T13:09:02.681231" elapsed="0.015330"/>
+</kw>
+<status status="PASS" start="2024-07-19T13:09:02.657471" elapsed="0.039090"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-19T13:09:03.705698" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-19T13:09:02.697611" elapsed="1.008087"/>
+</kw>
+<kw name="removeElement">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:03.710450" level="INFO">Clicking element 'xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]'.</msg>
+<arg>xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T13:09:03.709365" elapsed="0.068361"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:03.785927" level="INFO">Current page does not contain element 'xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]'.</msg>
+<arg>xpath://body/div[2]/div[1]/div[1]/div[1]/button[2]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2024-07-19T13:09:03.777726" elapsed="0.008201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:03.786432" level="INFO">Clicking element 'xpath://button[contains(text(),'Delete')]'.</msg>
+<arg>${delete_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T13:09:03.786432" elapsed="0.036127"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T13:09:03.828230" level="INFO">Current page does not contain element 'xpath://button[contains(text(),'Delete')]'.</msg>
+<arg>${delete_element}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2024-07-19T13:09:03.822559" elapsed="0.005671"/>
+</kw>
+<status status="PASS" start="2024-07-19T13:09:03.707674" elapsed="0.120556"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-19T13:09:04.840833" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-19T13:09:03.828230" elapsed="1.012603"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-19T13:09:04.843068" elapsed="2.192394"/>
+</kw>
+<status status="PASS" start="2024-07-19T13:08:57.121380" elapsed="9.914082"/>
+</test>
+<status status="PASS" start="2024-07-19T13:08:56.917592" elapsed="10.117870"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="AddRemoveElements">AddRemoveElements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
